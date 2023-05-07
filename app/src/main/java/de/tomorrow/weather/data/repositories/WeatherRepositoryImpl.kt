@@ -12,7 +12,7 @@ class WeatherRepositoryImpl(
     private val remoteDataSource: WeatherDataSource,
     private val coroutinesManager: CoroutinesManager
 ) : WeatherRepository {
-    override fun getWeather(name: String, lat: Double, lon: Double): Flow<WeatherData> {
+    override fun getWeather(name: String, lat: Float, lon: Float): Flow<WeatherData> {
         return remoteDataSource.getWeather(lat, lon)
             .map { it.toDomainObject(name) }
             .flowOn(coroutinesManager.io)

@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class CurrentWeatherDto(
     @SerializedName("time") val time: String,
-    @SerializedName("temperature") val temperature: Double,
-    @SerializedName("windspeed") val windSpeed: Double,
+    @SerializedName("temperature") val temperature: Float,
+    @SerializedName("windspeed") val windSpeed: Float,
     @SerializedName("winddirection") val windDirection: Int
 )

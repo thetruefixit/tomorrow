@@ -9,7 +9,7 @@ class WeatherDataSourceImpl(
     private val weatherApi: WeatherApi,
     private val defaultTimeZone: String
 ) : WeatherDataSource {
-    override fun getWeather(lat: Double, lon: Double): Flow<WeatherDataDto> {
+    override fun getWeather(lat: Float, lon: Float): Flow<WeatherDataDto> {
         return flow {
             val result = weatherApi.getWeather(lat, lon, defaultTimeZone, true)
             val body = result.body()

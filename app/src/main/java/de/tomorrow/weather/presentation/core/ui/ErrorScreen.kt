@@ -1,7 +1,6 @@
 package de.tomorrow.weather.presentation.core.ui
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -16,9 +15,7 @@ import de.tomorrow.weather.R
 @Composable
 fun ErrorScreen(
     errorText: String,
-    padding: PaddingValues,
-    isShowRetryButton: Boolean = true,
-    onRetryClicked: () -> Unit,
+    padding: PaddingValues
 ) {
     Column(
         modifier = Modifier
@@ -28,12 +25,6 @@ fun ErrorScreen(
         verticalArrangement = Arrangement.Center
     ) {
         Text(errorText, color = Color.Black, fontSize = 20.sp)
-        Spacer(modifier = Modifier.height(16.dp))
-        if (isShowRetryButton) {
-            Button(onClick = onRetryClicked) {
-                Text(stringResource(R.string.button_retry))
-            }
-        }
     }
 }
 
@@ -43,6 +34,5 @@ fun ErrorPreview() {
     ErrorScreen(
         errorText = stringResource(R.string.error_unknown),
         PaddingValues(10.dp),
-        true
-    ) {}
+    )
 }

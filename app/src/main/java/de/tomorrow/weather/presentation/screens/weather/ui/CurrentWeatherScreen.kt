@@ -36,8 +36,7 @@ fun CurrentWeatherScreen(
         is ScreenState.Error -> ErrorScreen(
             errorText = stringResource(id = R.string.error_unknown),
             padding = PaddingValues(8.dp),
-            true
-        ) {}
+        )
         ScreenState.Loading -> LoadingScreen(padding = PaddingValues(8.dp))
     }
 }
@@ -117,11 +116,12 @@ private fun LocationCard(
 }
 
 @Composable
-private fun DegreeView(temperature: Double) {
+private fun DegreeView(temperature: Float) {
     Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
         Text(
             color = Color.White,
-            text = BigDecimal.valueOf(temperature).setScale(0, RoundingMode.HALF_EVEN).toString(),
+            text = BigDecimal.valueOf(temperature.toDouble()).setScale(0, RoundingMode.HALF_EVEN)
+                .toString(),
             fontSize = 90.sp,
             maxLines = 1,
         )
@@ -141,7 +141,7 @@ private fun DegreeView(temperature: Double) {
 }
 
 @Composable
-private fun WindSpeedView(speed: Double) {
+private fun WindSpeedView(speed: Float) {
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.Center,
@@ -153,7 +153,7 @@ private fun WindSpeedView(speed: Double) {
             color = Color.White,
             text = stringResource(
                 id = R.string.abbreviation_speed_kmh,
-                BigDecimal.valueOf(speed).setScale(0, RoundingMode.HALF_EVEN).toString()
+                BigDecimal.valueOf(speed.toDouble()).setScale(0, RoundingMode.HALF_EVEN).toString()
             ),
             fontSize = 20.sp,
             maxLines = 1,
@@ -185,7 +185,7 @@ private fun WindDirectionView(direction: Int) {
 private fun FullScreenPreview() {
     Screen(
         value = WeatherData(
-            "Berlin", 54.10, 10.15, 80.0, 10.1, 1.1, 1
+            "Berlin", 54.10F, 10.15F, 80.0F, 10.1F, 1.1F, 1
         )
     )
 }

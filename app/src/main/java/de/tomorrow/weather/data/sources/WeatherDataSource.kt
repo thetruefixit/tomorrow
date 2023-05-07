@@ -4,5 +4,5 @@ import de.tomorrow.weather.data.models.WeatherDataDto
 import kotlinx.coroutines.flow.Flow
 
 interface WeatherDataSource {
-    fun getWeather(lat: Double, lon: Double): Flow<WeatherDataDto>
+    fun getWeather(lat: Float, lon: Float): Flow<WeatherDataDto>
 }
