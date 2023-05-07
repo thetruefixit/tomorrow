@@ -3,4 +3,9 @@
     <string name="button_retry">Retry</string>
     <string name="error_unknown">Something went wrong</string>
     <string name="degrees_symbol">\u00B0</string>
+    <string name="abbreviation_celsius">C</string>
+    <string name="abbreviation_speed_kmh" formatted="false">%1$s km/h</string>
+    <string name="abbreviation_wind_direction" formatted="false">%1$s\u00B0</string>
+    <string name="wind_direction">Wind direction:</string>
+    <string name="wind_speed">Wind speed:</string>
 </resources>

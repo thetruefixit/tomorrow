@@ -5,9 +5,7 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
+    primary = BlueCatalina, secondary = WhiteLilac, tertiary = TealDeep
 )
 
 @Composable
@@ -15,8 +13,6 @@ fun TomorrowWeatherTheme(
     content: @Composable () -> Unit
 ) {
     MaterialTheme(
-        colorScheme = LightColorScheme,
-        typography = Typography,
-        content = content
+        colorScheme = LightColorScheme, typography = Typography, content = content
     )
 }
