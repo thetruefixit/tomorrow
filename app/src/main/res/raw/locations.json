@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Hamburg",
+    "latitude": 53.619653,
+    "longitude": 10.079969
+  },
+  {
+    "name": "Bremen",
+    "latitude": 53.080917,
+    "longitude": 8.847533
+  },
+  {
+    "name": "Hanover",
+    "latitude": 52.378385,
+    "longitude": 9.794862
+  },
+  {
+    "name": "Berlin",
+    "latitude": 52.496385,
+    "longitude": 13.444041
+  },
+  {
+    "name": "Lübeck",
+    "latitude": 53.866865,
+    "longitude": 10.739542
+  },
+  {
+    "name": "Kiel",
+    "latitude": 54.30454,
+    "longitude": 10.152741
+  },
+  {
+    "name": "Flensburg",
+    "latitude": 54.797277,
+    "longitude": 9.491039
+  },
+  {
+    "name": "Wolfsburg",
+    "latitude": 52.426412,
+    "longitude": 10.821392
+  },
+  {
+    "name": "Bremerhaven",
+    "latitude": 53.542788,
+    "longitude": 8.613462
+  },
+  {
+    "name": "Oldenburg",
+    "latitude": 53.141598,
+    "longitude": 8.242565
+  }
+]
