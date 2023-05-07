@@ -15,13 +15,13 @@ class WeatherUseCasesImpl(
     private val weatherRepository: WeatherRepository
 ) : WeatherUseCases {
 
-    private var currentItem: Int = 0
+    private var currentItem: Int = -1
 
     private var _weatherLoop: Flow<WeatherData> =
         continuesDelay()
             .flatMapConcat { locationRepository.getAvailableLocations() }
             .onEach {
-                if (currentItem >= it.size) {
+                if (currentItem + 1 == it.size) {
                     currentItem = 0
                 } else {
                     currentItem++
@@ -33,7 +33,7 @@ class WeatherUseCasesImpl(
     private fun continuesDelay() = flow {
         while (true) {
             emit(Unit)
-            delay((currentItem * WeatherUseCases.WEATHER_INTERVAL_SECONDS).seconds)
+            delay((WeatherUseCases.WEATHER_INTERVAL_SECONDS).seconds)
         }
     }
 
