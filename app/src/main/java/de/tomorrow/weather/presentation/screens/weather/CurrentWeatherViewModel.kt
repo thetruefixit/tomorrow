@@ -21,13 +21,12 @@ class CurrentWeatherViewModel @Inject constructor(
     }
 
     private fun requestData() {
-        weatherUseCases.weatherLoop
+        weatherUseCases.weatherFlow
             .onEach {
-                val result = it
-                println(result)
+                _screenState.value = ScreenState.Content(it)
             }
             .catch {
-                throw it
+                _screenState.value = ScreenState.Error(it)
             }.shareIn(viewModelScope, SharingStarted.WhileSubscribed(1), replay = 1)
             .launchIn(viewModelScope)
     }
