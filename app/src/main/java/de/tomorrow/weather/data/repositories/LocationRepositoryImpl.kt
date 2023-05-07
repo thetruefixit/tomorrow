@@ -1,9 +1,10 @@
-package de.tomorrow.weather.data.sources
+package de.tomorrow.weather.data.repositories
 
 import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import de.tomorrow.weather.R
+import de.tomorrow.weather.domain.repositories.LocationRepository
 import de.tomorrow.weather.domain.weather.models.Location
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

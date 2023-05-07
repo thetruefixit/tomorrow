@@ -2,8 +2,8 @@
 
 package de.tomorrow.weather.domain.weather.usecases
 
-import de.tomorrow.weather.data.repositories.WeatherRepository
-import de.tomorrow.weather.data.sources.LocationRepository
+import de.tomorrow.weather.domain.repositories.LocationRepository
+import de.tomorrow.weather.domain.repositories.WeatherRepository
 import de.tomorrow.weather.domain.weather.models.WeatherData
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.delay

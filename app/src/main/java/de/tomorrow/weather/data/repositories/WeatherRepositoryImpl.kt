@@ -1,6 +1,7 @@
 package de.tomorrow.weather.data.repositories
 
 import de.tomorrow.weather.data.sources.WeatherDataSource
+import de.tomorrow.weather.domain.repositories.WeatherRepository
 import de.tomorrow.weather.domain.weather.models.WeatherData
 import de.tomorrow.weather.domain.weather.models.mappers.toDomainObject
 import de.tomorrow.weather.utils.coroutines.CoroutinesManager

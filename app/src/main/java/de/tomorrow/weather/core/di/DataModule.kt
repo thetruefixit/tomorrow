@@ -7,12 +7,12 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import de.tomorrow.weather.data.network.WeatherApi
-import de.tomorrow.weather.data.repositories.WeatherRepository
+import de.tomorrow.weather.data.repositories.LocationRepositoryImpl
 import de.tomorrow.weather.data.repositories.WeatherRepositoryImpl
-import de.tomorrow.weather.data.sources.LocationRepository
-import de.tomorrow.weather.data.sources.LocationRepositoryImpl
 import de.tomorrow.weather.data.sources.WeatherDataSource
 import de.tomorrow.weather.data.sources.WeatherDataSourceImpl
+import de.tomorrow.weather.domain.repositories.LocationRepository
+import de.tomorrow.weather.domain.repositories.WeatherRepository
 import de.tomorrow.weather.utils.coroutines.CoroutinesManager
 import javax.inject.Singleton
 

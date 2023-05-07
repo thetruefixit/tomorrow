@@ -1,4 +1,4 @@
-package de.tomorrow.weather.data.repositories
+package de.tomorrow.weather.domain.repositories
 
 import de.tomorrow.weather.domain.weather.models.WeatherData
 import kotlinx.coroutines.flow.Flow

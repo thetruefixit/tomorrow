@@ -4,8 +4,8 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import de.tomorrow.weather.data.repositories.WeatherRepository
-import de.tomorrow.weather.data.sources.LocationRepository
+import de.tomorrow.weather.domain.repositories.LocationRepository
+import de.tomorrow.weather.domain.repositories.WeatherRepository
 import de.tomorrow.weather.domain.weather.usecases.WeatherUseCases
 import de.tomorrow.weather.domain.weather.usecases.WeatherUseCasesImpl
 import javax.inject.Singleton
